@@ -15,7 +15,7 @@ def main():
         return 1
 
     print("El teu missatge de commit és convencional.")
-    return 1
+    return 0
 
 
 if __name__ == "__main__":
