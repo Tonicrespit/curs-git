@@ -16,7 +16,10 @@ jobs:
         python-version: '3.10'
 
     - name: Install pre-commit
-      run: pip install pre-commit --hook-type pre-commit
+      run: pip install pre-commit
+
+    - name: Set up hooks
+      run: pre-commit install --hook-type pre-commit
 
     - name: Run pre-commit on all files
       run: pre-commit run --all-files
