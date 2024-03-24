@@ -14,6 +14,7 @@ def main():
         print("ERROR: El missatge de commit no és convencional.")
         return 1
 
+    print("El teu missatge de commit és convencional.")
     return 0
 
 
