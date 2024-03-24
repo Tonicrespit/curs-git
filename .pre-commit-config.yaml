@@ -22,5 +22,5 @@ repos:
     -   id: conventional-commit
         name: Check Conventional Commit Message
         language: system
-        entry: python -m hooks.conventional_commit
+        entry: python ./hooks/conventional_commit.py
         stages: [commit-msg]
