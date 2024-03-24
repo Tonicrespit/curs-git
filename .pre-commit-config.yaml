@@ -17,3 +17,10 @@ repos:
     rev: v1.9.0
     hooks:
     -   id: mypy
+-   repo: local
+    hooks:
+    -   id: conventional-commit
+        name: Check Conventional Commit Message
+        language: system
+        entry: python -m hooks.conventional_commit
+        stages: [commit-msg]
