@@ -20,6 +20,10 @@ class TestApp(unittest.TestCase):
         get_response = self.app.get("/tasks")
         self.assertEqual(get_response.json, [])
 
+    def test_remove_inexistent(self):
+        delete_response = self.app.delete("/tasks/999")
+        self.assertEqual(delete_response.status_code, 404)
+
 
 if __name__ == "__main__":
     unittest.main()

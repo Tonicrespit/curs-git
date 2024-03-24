@@ -19,6 +19,8 @@ def add_task_route():
 
 @app.route("/tasks/<int:task_id>", methods=["DELETE"])
 def remove_task_route(task_id):
+    if task_id >= len(get_tasks()):
+        return "ID no existeix", 404
     remove_task(task_id)
     return "", 204
 
